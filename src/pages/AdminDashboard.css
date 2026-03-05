@@ -1,0 +1,99 @@
+/* AdminDashboard.css */
+
+.admin-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.admin-container h2 {
+    color: var(--primary-color);
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    text-align: left;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 12px;
+}
+
+.admin-table-wrapper {
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.admin-table th {
+    background-color: var(--hover-bg);
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.admin-table tr {
+    transition: background-color var(--transition-fast);
+}
+
+.admin-table tbody tr:hover {
+    background-color: rgba(0, 164, 159, 0.04);
+    /* Subtle primary color tint on hover */
+}
+
+.admin-table td {
+    color: var(--text-light);
+    font-size: 15px;
+}
+
+/* Specific column styles */
+.admin-table td:nth-child(1) {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.admin-table td:nth-child(2) {
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+/* Premium Delete Button */
+.btn-delete {
+    background-color: transparent;
+    color: #e52323;
+    border: 1px solid #ffd6d6;
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-delete:hover {
+    background-color: #e52323;
+    color: var(--white);
+    border-color: #e52323;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(229, 35, 35, 0.2);
+}
+
+.btn-delete:active {
+    transform: translateY(0);
+}

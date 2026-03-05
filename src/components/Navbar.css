@@ -1,0 +1,144 @@
+/* Simple Navbar Styles */
+.simple-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Left Section: Logo */
+.navbar-left .logo-link {
+    text-decoration: none;
+    color: #002f34;
+}
+
+.navbar-left h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Center Section: Search Bar */
+.navbar-center {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 700px;
+    margin: 0 20px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #002f34;
+    border-radius: 4px 0 0 4px;
+    /* Rounds the left corners */
+    outline: none;
+    /* Removes default blue outline when clicked */
+}
+
+/* Add a visual border when input is clicked */
+.search-input:focus {
+    border-color: #00a49f;
+}
+
+.search-button {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #002f34;
+    color: white;
+    border: 2px solid #002f34;
+    border-left: none;
+    /* Connect seamlessly to input */
+    border-radius: 0 4px 4px 0;
+    /* Rounds the right corners */
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-button:hover {
+    background-color: #00a49f;
+    border-color: #00a49f;
+}
+
+/* Right Section: Actions */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.language-selector {
+    font-weight: bold;
+    font-size: 15px;
+    color: #002f34;
+    cursor: pointer;
+}
+
+.auth-link {
+    font-weight: bold;
+    font-size: 16px;
+    color: #002f34;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    /* Gives space between text and underline */
+}
+
+.auth-link:hover {
+    color: #00a49f;
+}
+
+/* Classic OLX style Sell Button but simplified */
+.sell-button {
+    padding: 8px 24px;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: white;
+    color: #002f34;
+    border: 5px solid #ffce32;
+    /* Simple yellow border */
+    border-radius: 30px;
+    /* Makes it a pill shape */
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s;
+}
+
+.sell-button:hover {
+    background-color: #ffce32;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 800px) {
+    .simple-navbar {
+        flex-wrap: wrap;
+        /* Allows wrapping to next row */
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .navbar-center {
+        order: 3;
+        /* Push search bar below the top elements */
+        width: 100%;
+        margin: 0;
+        max-width: none;
+    }
+
+    .navbar-left h2 {
+        font-size: 24px;
+    }
+
+    .navbar-right {
+        gap: 15px;
+    }
+}
