@@ -59,7 +59,7 @@ const Admin = () => {
               <tr key={product._id}>
                 <td>
                   <img
-                    src={product.image ? `http://localhost:5000/uploads/${product.image}` : "/placeholder.jpg"}
+                    src={product.image ? `https://olx-clone-fmky.onrender.com/uploads/${product.image}` : "/placeholder.jpg"}
                     alt={product.title}
                     style={{ width: "50px", height: "50px", objectFit: "cover", borderRadius: "8px" }}
                   />

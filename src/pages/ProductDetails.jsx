@@ -65,7 +65,7 @@ const ProductDetails = () => {
     }
 
     const imageSrc = product.image
-        ? `http://localhost:5000/uploads/${product.image}`
+        ? `https://olx-clone-fmky.onrender.com/uploads/${product.image}`
         : "/placeholder.jpg";
 
     return (
