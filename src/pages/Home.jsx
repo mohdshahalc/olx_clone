@@ -25,11 +25,18 @@ function Home({ searchQuery }) {
       });
 
       // 3. Save the actual products we got back from the backend
-      setProducts(response.data);
+      // Ensure it's an array to avoid map errors if the API returns a string/error
+      if (Array.isArray(response.data)) {
+        setProducts(response.data);
+      } else {
+        console.error("Backend did not return an array:", response.data);
+        setProducts([]); // Fallback to empty array
+      }
 
     } catch (error) {
       // If something goes wrong (like no internet), log the error
       console.error("Failed to fetch products:", error);
+      setProducts([]); // Fallback on error
     } finally {
       // 4. Hide the loading message, whether it succeeded or failed
       setLoading(false);

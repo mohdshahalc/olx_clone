@@ -13,9 +13,15 @@ const Admin = () => {
   const fetchProducts = async () => {
     try {
       const res = await API.get("/products");
-      setProducts(res.data);
+      if (Array.isArray(res.data)) {
+        setProducts(res.data);
+      } else {
+        console.error("Backend did not return an array:", res.data);
+        setProducts([]);
+      }
     } catch (error) {
       console.error("Failed to load products");
+      setProducts([]);
     }
   };
 

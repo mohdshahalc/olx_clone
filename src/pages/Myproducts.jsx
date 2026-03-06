@@ -19,9 +19,15 @@ const MyProducts = () => {
     const fetchMyProducts = async () => {
       try {
         const res = await API.get("/products/my-products");
-        setProducts(res.data);
+        if (Array.isArray(res.data)) {
+          setProducts(res.data);
+        } else {
+          console.error("Backend did not return an array:", res.data);
+          setProducts([]);
+        }
       } catch (error) {
         console.error("Failed to load products", error);
+        setProducts([]);
       } finally {
         setLoading(false);
       }
@@ -30,7 +36,7 @@ const MyProducts = () => {
     fetchMyProducts();
   }, [navigate]);
 
-  
+
 
   if (loading) {
     return (
