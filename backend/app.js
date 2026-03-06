@@ -6,7 +6,7 @@ const productRoutes = require("./routes/productRoutes");
 
 const app = express();
 
-// Middlewares
+// CORS FIX
 app.use(cors({
   origin: [
     "http://localhost:5173",   // Vite local frontend
