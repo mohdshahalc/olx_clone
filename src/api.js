@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
- baseURL: "https://olx-clone.onrender.com/api",
+  baseURL: "https://olx-clone-fnky.onrender.com/api",
   headers: {
     "Content-Type": "application/json"
   }
